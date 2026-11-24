@@ -8,7 +8,7 @@ Enhancement 1: Used PostImageWidget with Image class, BoxFit.cover and ClipRRect
 Enhancement 2: Used AvatarWidget with CircleAvatar for user profile image.
 Enhancement 3: Changed Like and Comment to widget-based ActionBarWidget using GestureDetector, showing only number of likes.
 
-### 1. Managing Posts and Notifications Efficiently
+### 1. Lab 2
 * **Modular Components:** Utilized reusable widgets (`NewsfeedCard`, `NotificationWidget`, `AvatarWidget`, `CustomText`) to avoid code duplication.
 * **Responsive Layouts:** Applied `flutter_screenutil` for scalable fonts, padding, and UI elements.
 * **Stateful Navigation:** Combined a `PageView` and `BottomNavigationBar` in `HomeScreen` to toggle between `NewsfeedScreen` and `NotificationScreen` while dynamically updating the `AppBar` title.
