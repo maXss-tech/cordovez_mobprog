@@ -1,5 +1,6 @@
 import 'package:cordovez_mobprog/constants.dart';
 import 'package:cordovez_mobprog/screens/newsfeed_screen.dart';
+import 'package:cordovez_mobprog/screens/notification_screen.dart'; // 1. Added import
 import 'package:cordovez_mobprog/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
         shadowColor: fbTextColorWhite,
         elevation: 2,
         title: CustomText(
-          text: 'Facebook',
+          // 2. Changed 'Facebook' to switch to 'NOTIFICATION' on tab 1
+          text: _selectedIndex == 1 ? 'NOTIFICATION' : 'Facebook',
           fontSize: ScreenUtil().setSp(25),
           color: fbPrimary,
           fontFamily: 'Klavika',
@@ -39,10 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: _pageController,
         children: const <Widget>[
           NewsfeedScreen(),
-          // Placeholder for Notifications tab - prevents RangeError
-          Center(
-            child: Text('No notifications yet'),
-          ),
+          NotificationScreen(), // 3. Replaced placeholder with NotificationScreen()
         ],
         onPageChanged: (page) {
           setState(() {
